@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "navidrome-tools"
+version = "0.1.0"
+description = "Small standalone scripts for tending a self-hosted music library."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Vitor Machado" }]
+requires-python = ">=3.9"
+dependencies = ["mutagen"]
+keywords = ["navidrome", "music", "library", "lyrics", "lrclib", "flac"]
+
+[project.urls]
+Homepage = "https://github.com/machado-vitor/navidrome-tools"
+
+[project.scripts]
+organize = "organize:main"
+fetch-lyrics = "fetch_lyrics:main"
+
+[tool.setuptools]
+py-modules = ["organize", "fetch_lyrics"]
